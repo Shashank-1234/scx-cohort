@@ -1,0 +1,27 @@
+# Allowlist: git holds only the code needed to build and run scx_cohort, plus the root README.
+# Everything else in this folder (docs, notes, experiments, data, figures, proposals, archive,
+# agent files) stays on the local machine only.
+
+# 1. ignore everything at the top level ...
+/*
+
+# 2. ... except these
+!/.gitignore
+!/README.md
+!/src/
+!/gang-scheduling-figs/
+/gang-scheduling-figs/*
+!/gang-scheduling-figs/bench/
+!/gang-scheduling-figs/scripts/
+!/gang-scheduling-figs/tests/
+
+# 3. never track docs (other than the root README), figures, or build/cache files
+*.md
+!/README.md
+*.png
+*.pdf
+*.svg
+.DS_Store
+._*
+__pycache__/
+*.pyc
